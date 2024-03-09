@@ -1,0 +1,38 @@
+{
+	"_id": ObjectId(),
+	"username": "user123",
+	"email": "user123@example.com",
+	"passwordHash": "hashed_password",
+	"createDate": ISODate("2024-03-07T00:00:00Z"),
+	"categories": [
+		{
+			"_id": ObjectId(),
+			"name": "Groceries",
+			"type": "Expense"
+		},
+		{
+			"_id": ObjectId(),
+			"name": "Salary",
+			"type": "Income"
+		}
+	],
+	"transactions": [
+		{
+			"_id": ObjectId(),
+			"categoryId": ObjectId(),
+			"amount": 100.00,
+			"type": "Expense",
+			"date": ISODate("2024-03-07T00:00:00Z"),
+			"description": "Grocery shopping at Supermarket"
+		}
+	],
+	"budgets": [
+		{
+			"_id": ObjectId(),
+			"categoryId": ObjectId(),
+			"amount": 500.00,
+			"startDate": ISODate("2024-03-01T00:00:00Z"),
+			"endDate": ISODate("2024-03-31T00:00:00Z")
+		}
+	]
+}
