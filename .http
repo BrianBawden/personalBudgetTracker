@@ -1,0 +1,38 @@
+// .http file is used for REMOTE development
+@port =
+@host = https://w08-personal-assignment-swagger.onrender.com
+@route = authors
+@currentTime = {{$datetime iso8601}}
+@randomInt = {{$randomInt 5 200}}
+
+// -------------------------------------------------------------------- REQUESTS
+
+### GET LIST
+GET {{host}}{{port}}/{{route}}/ HTTP/1.1
+
+### NEW ITEM
+POST {{host}}{{port}}/{{route}}/ HTTP/1.1
+content-type: application/json
+
+{
+  "author_name": "Carlos Mercado {{randomInt}}",
+	"author_email": "carlos@gmail.com",
+	"author_image": "picture.jpg"
+}
+
+### GET SINGLE ITEM
+@newItemId = 65be34eb12b471644c515f39
+GET {{host}}{{port}}/{{route}}/{{newItemId}} HTTP/1.1
+
+### UPDATE ITEM
+PUT {{host}}{{port}}/{{route}}/{{newItemId}} HTTP/1.1
+content-type: application/json
+
+{
+  "author_name": "Carlos Mercado CHANGED",
+	"author_email": "cmercado{{randomInt}}@gmail.com",
+	"author_image": "profile.png"
+}
+
+### DELETE ITEM
+DELETE {{host}}{{port}}/{{route}}/{{newItemId}} HTTP/1.1
