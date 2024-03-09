@@ -1,198 +1,198 @@
 [
-	{
-		"_id": {
-			"$oid": "65ec90f7fc13ae34c1cd3864"
-		},
-		"name": "Housing",
-		"type": "Income"
-	},
-	{
-		"_id": {
-			"$oid": "65ec90f7fc13ae34c1cd3865"
-		},
-		"name": "Housing",
-		"type": "Expense"
-	},
-	{
-		"_id": {
-			"$oid": "65ec90f7fc13ae34c1cd3866"
-		},
-		"name": "Transportation",
-		"type": "Income"
-	},
-	{
-		"_id": {
-			"$oid": "65ec90f7fc13ae34c1cd3867"
-		},
-		"name": "Transportation",
-		"type": "Expense"
-	},
-	{
-		"_id": {
-			"$oid": "65ec90f7fc13ae34c1cd3868"
-		},
-		"name": "Groceries",
-		"type": "Income"
-	},
-	{
-		"_id": {
-			"$oid": "65ec90f7fc13ae34c1cd3869"
-		},
-		"name": "Groceries",
-		"type": "Expense"
-	},
-	{
-		"_id": {
-			"$oid": "65ec90f7fc13ae34c1cd386a"
-		},
-		"name": "Insurance",
-		"type": "Income"
-	},
-	{
-		"_id": {
-			"$oid": "65ec90f7fc13ae34c1cd386b"
-		},
-		"name": "Insurance",
-		"type": "Expense"
-	},
-	{
-		"_id": {
-			"$oid": "65ec90f7fc13ae34c1cd386c"
-		},
-		"name": "Utilities",
-		"type": "Income"
-	},
-	{
-		"_id": {
-			"$oid": "65ec90f7fc13ae34c1cd386d"
-		},
-		"name": "Utilities",
-		"type": "Expense"
-	},
-	{
-		"_id": {
-			"$oid": "65ec90f7fc13ae34c1cd386e"
-		},
-		"name": "Healthcare",
-		"type": "Income"
-	},
-	{
-		"_id": {
-			"$oid": "65ec90f7fc13ae34c1cd386f"
-		},
-		"name": "Healthcare",
-		"type": "Expense"
-	},
-	{
-		"_id": {
-			"$oid": "65ec90f7fc13ae34c1cd3870"
-		},
-		"name": "Entertainment",
-		"type": "Income"
-	},
-	{
-		"_id": {
-			"$oid": "65ec90f7fc13ae34c1cd3871"
-		},
-		"name": "Entertainment",
-		"type": "Expense"
-	},
-	{
-		"_id": {
-			"$oid": "65ec90f7fc13ae34c1cd3872"
-		},
-		"name": "Debt Repayment",
-		"type": "Income"
-	},
-	{
-		"_id": {
-			"$oid": "65ec90f7fc13ae34c1cd3873"
-		},
-		"name": "Debt Repayment",
-		"type": "Expense"
-	},
-	{
-		"_id": {
-			"$oid": "65ec90f7fc13ae34c1cd3874"
-		},
-		"name": "Savings",
-		"type": "Income"
-	},
-	{
-		"_id": {
-			"$oid": "65ec90f7fc13ae34c1cd3875"
-		},
-		"name": "Savings",
-		"type": "Expense"
-	},
-	{
-		"_id": {
-			"$oid": "65ec90f7fc13ae34c1cd3876"
-		},
-		"name": "Education",
-		"type": "Income"
-	},
-	{
-		"_id": {
-			"$oid": "65ec90f7fc13ae34c1cd3877"
-		},
-		"name": "Education",
-		"type": "Expense"
-	},
-	{
-		"_id": {
-			"$oid": "65ec90f7fc13ae34c1cd3878"
-		},
-		"name": "Personal Care",
-		"type": "Income"
-	},
-	{
-		"_id": {
-			"$oid": "65ec90f7fc13ae34c1cd3879"
-		},
-		"name": "Personal Care",
-		"type": "Expense"
-	},
-	{
-		"_id": {
-			"$oid": "65ec90f7fc13ae34c1cd387a"
-		},
-		"name": "Clothing",
-		"type": "Income"
-	},
-	{
-		"_id": {
-			"$oid": "65ec90f7fc13ae34c1cd387b"
-		},
-		"name": "Clothing",
-		"type": "Expense"
-	},
-	{
-		"_id": {
-			"$oid": "65ec90f7fc13ae34c1cd387c"
-		},
-		"name": "Gifts/Donations",
-		"type": "Income"
-	},
-	{
-		"_id": {
-			"$oid": "65ec90f7fc13ae34c1cd387d"
-		},
-		"name": "Gifts/Donations",
-		"type": "Expense"
-	},
-	{
-		"_id": {
-			"$oid": "65ec90f7fc13ae34c1cd387e"
-		},
-		"name": "Miscellaneous",
-		"type": "Income"
-	},
-	{
-		"_id": {
-			"$oid": "65ec90f7fc13ae34c1cd387f"
-		},
-		"name": "Miscellaneous",
-		"type": "Expense"
-	}
+  {
+    "_id": {
+      "$oid": "65ec90f7fc13ae34c1cd3864"
+    },
+    "name": "Housing",
+    "type": "Income"
+  },
+  {
+    "_id": {
+      "$oid": "65ec90f7fc13ae34c1cd3865"
+    },
+    "name": "Housing",
+    "type": "Expense"
+  },
+  {
+    "_id": {
+      "$oid": "65ec90f7fc13ae34c1cd3866"
+    },
+    "name": "Transportation",
+    "type": "Income"
+  },
+  {
+    "_id": {
+      "$oid": "65ec90f7fc13ae34c1cd3867"
+    },
+    "name": "Transportation",
+    "type": "Expense"
+  },
+  {
+    "_id": {
+      "$oid": "65ec90f7fc13ae34c1cd3868"
+    },
+    "name": "Groceries",
+    "type": "Income"
+  },
+  {
+    "_id": {
+      "$oid": "65ec90f7fc13ae34c1cd3869"
+    },
+    "name": "Groceries",
+    "type": "Expense"
+  },
+  {
+    "_id": {
+      "$oid": "65ec90f7fc13ae34c1cd386a"
+    },
+    "name": "Insurance",
+    "type": "Income"
+  },
+  {
+    "_id": {
+      "$oid": "65ec90f7fc13ae34c1cd386b"
+    },
+    "name": "Insurance",
+    "type": "Expense"
+  },
+  {
+    "_id": {
+      "$oid": "65ec90f7fc13ae34c1cd386c"
+    },
+    "name": "Utilities",
+    "type": "Income"
+  },
+  {
+    "_id": {
+      "$oid": "65ec90f7fc13ae34c1cd386d"
+    },
+    "name": "Utilities",
+    "type": "Expense"
+  },
+  {
+    "_id": {
+      "$oid": "65ec90f7fc13ae34c1cd386e"
+    },
+    "name": "Healthcare",
+    "type": "Income"
+  },
+  {
+    "_id": {
+      "$oid": "65ec90f7fc13ae34c1cd386f"
+    },
+    "name": "Healthcare",
+    "type": "Expense"
+  },
+  {
+    "_id": {
+      "$oid": "65ec90f7fc13ae34c1cd3870"
+    },
+    "name": "Entertainment",
+    "type": "Income"
+  },
+  {
+    "_id": {
+      "$oid": "65ec90f7fc13ae34c1cd3871"
+    },
+    "name": "Entertainment",
+    "type": "Expense"
+  },
+  {
+    "_id": {
+      "$oid": "65ec90f7fc13ae34c1cd3872"
+    },
+    "name": "Debt Repayment",
+    "type": "Income"
+  },
+  {
+    "_id": {
+      "$oid": "65ec90f7fc13ae34c1cd3873"
+    },
+    "name": "Debt Repayment",
+    "type": "Expense"
+  },
+  {
+    "_id": {
+      "$oid": "65ec90f7fc13ae34c1cd3874"
+    },
+    "name": "Savings",
+    "type": "Income"
+  },
+  {
+    "_id": {
+      "$oid": "65ec90f7fc13ae34c1cd3875"
+    },
+    "name": "Savings",
+    "type": "Expense"
+  },
+  {
+    "_id": {
+      "$oid": "65ec90f7fc13ae34c1cd3876"
+    },
+    "name": "Education",
+    "type": "Income"
+  },
+  {
+    "_id": {
+      "$oid": "65ec90f7fc13ae34c1cd3877"
+    },
+    "name": "Education",
+    "type": "Expense"
+  },
+  {
+    "_id": {
+      "$oid": "65ec90f7fc13ae34c1cd3878"
+    },
+    "name": "Personal Care",
+    "type": "Income"
+  },
+  {
+    "_id": {
+      "$oid": "65ec90f7fc13ae34c1cd3879"
+    },
+    "name": "Personal Care",
+    "type": "Expense"
+  },
+  {
+    "_id": {
+      "$oid": "65ec90f7fc13ae34c1cd387a"
+    },
+    "name": "Clothing",
+    "type": "Income"
+  },
+  {
+    "_id": {
+      "$oid": "65ec90f7fc13ae34c1cd387b"
+    },
+    "name": "Clothing",
+    "type": "Expense"
+  },
+  {
+    "_id": {
+      "$oid": "65ec90f7fc13ae34c1cd387c"
+    },
+    "name": "Gifts/Donations",
+    "type": "Income"
+  },
+  {
+    "_id": {
+      "$oid": "65ec90f7fc13ae34c1cd387d"
+    },
+    "name": "Gifts/Donations",
+    "type": "Expense"
+  },
+  {
+    "_id": {
+      "$oid": "65ec90f7fc13ae34c1cd387e"
+    },
+    "name": "Miscellaneous",
+    "type": "Income"
+  },
+  {
+    "_id": {
+      "$oid": "65ec90f7fc13ae34c1cd387f"
+    },
+    "name": "Miscellaneous",
+    "type": "Expense"
+  }
 ]
