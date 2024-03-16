@@ -8,7 +8,9 @@ const PORT = process.env.PORT || 8080;
 // eslint-disable-next-line no-console
 console.log(`Is localhost (swagger.js): ${isLocalHost}`);
 
-const HOSTING = isLocalHost ? `localhost:${PORT}` : '2024-cs341-budget-app-swagger.onrender.com';
+const HOSTING = isLocalHost
+  ? `localhost:${PORT}`
+  : 'cs341-2024-winter-budget-app-swagger.onrender.com';
 const SCHEMES = isLocalHost ? ['http', 'https'] : ['https', 'http'];
 
 const docsDefinition = {
