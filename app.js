@@ -16,7 +16,7 @@ var session = require('express-session');
 //** CONSTANTS -------------------------------------------------------------- */
 
 require('dotenv').config();
-const isLocalHost = true;
+const isLocalHost = false;
 const port = process.env.PORT || 8080;
 const render = process.env.RENDER_URI;
 
