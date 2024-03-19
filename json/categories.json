@@ -1,198 +1,198 @@
 [
-  {
-    "_id": {
-      "$oid": "65ec90f7fc13ae34c1cd3864"
-    },
-    "name": "Housing",
-    "type": "Income"
-  },
-  {
-    "_id": {
-      "$oid": "65ec90f7fc13ae34c1cd3865"
-    },
-    "name": "Housing",
-    "type": "Expense"
-  },
-  {
-    "_id": {
-      "$oid": "65ec90f7fc13ae34c1cd3866"
-    },
-    "name": "Transportation",
-    "type": "Income"
-  },
-  {
-    "_id": {
-      "$oid": "65ec90f7fc13ae34c1cd3867"
-    },
-    "name": "Transportation",
-    "type": "Expense"
-  },
-  {
-    "_id": {
-      "$oid": "65ec90f7fc13ae34c1cd3868"
-    },
-    "name": "Groceries",
-    "type": "Income"
-  },
-  {
-    "_id": {
-      "$oid": "65ec90f7fc13ae34c1cd3869"
-    },
-    "name": "Groceries",
-    "type": "Expense"
-  },
-  {
-    "_id": {
-      "$oid": "65ec90f7fc13ae34c1cd386a"
-    },
-    "name": "Insurance",
-    "type": "Income"
-  },
-  {
-    "_id": {
-      "$oid": "65ec90f7fc13ae34c1cd386b"
-    },
-    "name": "Insurance",
-    "type": "Expense"
-  },
-  {
-    "_id": {
-      "$oid": "65ec90f7fc13ae34c1cd386c"
-    },
-    "name": "Utilities",
-    "type": "Income"
-  },
-  {
-    "_id": {
-      "$oid": "65ec90f7fc13ae34c1cd386d"
-    },
-    "name": "Utilities",
-    "type": "Expense"
-  },
-  {
-    "_id": {
-      "$oid": "65ec90f7fc13ae34c1cd386e"
-    },
-    "name": "Healthcare",
-    "type": "Income"
-  },
-  {
-    "_id": {
-      "$oid": "65ec90f7fc13ae34c1cd386f"
-    },
-    "name": "Healthcare",
-    "type": "Expense"
-  },
-  {
-    "_id": {
-      "$oid": "65ec90f7fc13ae34c1cd3870"
-    },
-    "name": "Entertainment",
-    "type": "Income"
-  },
-  {
-    "_id": {
-      "$oid": "65ec90f7fc13ae34c1cd3871"
-    },
-    "name": "Entertainment",
-    "type": "Expense"
-  },
-  {
-    "_id": {
-      "$oid": "65ec90f7fc13ae34c1cd3872"
-    },
-    "name": "Debt Repayment",
-    "type": "Income"
-  },
-  {
-    "_id": {
-      "$oid": "65ec90f7fc13ae34c1cd3873"
-    },
-    "name": "Debt Repayment",
-    "type": "Expense"
-  },
-  {
-    "_id": {
-      "$oid": "65ec90f7fc13ae34c1cd3874"
-    },
-    "name": "Savings",
-    "type": "Income"
-  },
-  {
-    "_id": {
-      "$oid": "65ec90f7fc13ae34c1cd3875"
-    },
-    "name": "Savings",
-    "type": "Expense"
-  },
-  {
-    "_id": {
-      "$oid": "65ec90f7fc13ae34c1cd3876"
-    },
-    "name": "Education",
-    "type": "Income"
-  },
-  {
-    "_id": {
-      "$oid": "65ec90f7fc13ae34c1cd3877"
-    },
-    "name": "Education",
-    "type": "Expense"
-  },
-  {
-    "_id": {
-      "$oid": "65ec90f7fc13ae34c1cd3878"
-    },
-    "name": "Personal Care",
-    "type": "Income"
-  },
-  {
-    "_id": {
-      "$oid": "65ec90f7fc13ae34c1cd3879"
-    },
-    "name": "Personal Care",
-    "type": "Expense"
-  },
-  {
-    "_id": {
-      "$oid": "65ec90f7fc13ae34c1cd387a"
-    },
-    "name": "Clothing",
-    "type": "Income"
-  },
-  {
-    "_id": {
-      "$oid": "65ec90f7fc13ae34c1cd387b"
-    },
-    "name": "Clothing",
-    "type": "Expense"
-  },
-  {
-    "_id": {
-      "$oid": "65ec90f7fc13ae34c1cd387c"
-    },
-    "name": "Gifts/Donations",
-    "type": "Income"
-  },
-  {
-    "_id": {
-      "$oid": "65ec90f7fc13ae34c1cd387d"
-    },
-    "name": "Gifts/Donations",
-    "type": "Expense"
-  },
-  {
-    "_id": {
-      "$oid": "65ec90f7fc13ae34c1cd387e"
-    },
-    "name": "Miscellaneous",
-    "type": "Income"
-  },
-  {
-    "_id": {
-      "$oid": "65ec90f7fc13ae34c1cd387f"
-    },
-    "name": "Miscellaneous",
-    "type": "Expense"
-  }
+	{
+		"_id": {
+			"$oid": "65fa0ee6e10537e70a81429c"
+		},
+		"name": "Housing",
+		"type": "Income"
+	},
+	{
+		"_id": {
+			"$oid": "65fa0ee6e10537e85f4fbac6"
+		},
+		"name": "Housing",
+		"type": "Expense"
+	},
+	{
+		"_id": {
+			"$oid": "65fa0ee6e10537e7916b77ea"
+		},
+		"name": "Transportation",
+		"type": "Income"
+	},
+	{
+		"_id": {
+			"$oid": "65fa0ee6e10537e8c57a89fc"
+		},
+		"name": "Transportation",
+		"type": "Expense"
+	},
+	{
+		"_id": {
+			"$oid": "65fa0ee6e10537e83cb64a86"
+		},
+		"name": "Groceries",
+		"type": "Income"
+	},
+	{
+		"_id": {
+			"$oid": "65fa0ee6e10537e83e6c7b29"
+		},
+		"name": "Groceries",
+		"type": "Expense"
+	},
+	{
+		"_id": {
+			"$oid": "65fa0ee6e10537e8928b95a2"
+		},
+		"name": "Insurance",
+		"type": "Income"
+	},
+	{
+		"_id": {
+			"$oid": "65fa0ee6e10537e7c520d9e8"
+		},
+		"name": "Insurance",
+		"type": "Expense"
+	},
+	{
+		"_id": {
+			"$oid": "65fa0ee6e10537e71b4180a1"
+		},
+		"name": "Utilities",
+		"type": "Income"
+	},
+	{
+		"_id": {
+			"$oid": "65fa0ee6e10537e8a3bcc7a5"
+		},
+		"name": "Utilities",
+		"type": "Expense"
+	},
+	{
+		"_id": {
+			"$oid": "65fa0ee6e10537e8b1b73643"
+		},
+		"name": "Healthcare",
+		"type": "Income"
+	},
+	{
+		"_id": {
+			"$oid": "65fa0ee6e10537e6c405ce91"
+		},
+		"name": "Healthcare",
+		"type": "Expense"
+	},
+	{
+		"_id": {
+			"$oid": "65fa0ee6e10537e770363861"
+		},
+		"name": "Entertainment",
+		"type": "Income"
+	},
+	{
+		"_id": {
+			"$oid": "65fa0ee6e10537e7c28531ea"
+		},
+		"name": "Entertainment",
+		"type": "Expense"
+	},
+	{
+		"_id": {
+			"$oid": "65fa0ee6e10537e841ea0415"
+		},
+		"name": "Debt Repayment",
+		"type": "Income"
+	},
+	{
+		"_id": {
+			"$oid": "65fa0ee6e10537e7a67f14fc"
+		},
+		"name": "Debt Repayment",
+		"type": "Expense"
+	},
+	{
+		"_id": {
+			"$oid": "65fa0ee6e10537e82b6ecdce"
+		},
+		"name": "Savings",
+		"type": "Income"
+	},
+	{
+		"_id": {
+			"$oid": "65fa0ee6e10537e80c7b5ce0"
+		},
+		"name": "Savings",
+		"type": "Expense"
+	},
+	{
+		"_id": {
+			"$oid": "65fa0ee6e10537e7b0039d8e"
+		},
+		"name": "Education",
+		"type": "Income"
+	},
+	{
+		"_id": {
+			"$oid": "65fa0ee6e10537e87509726b"
+		},
+		"name": "Education",
+		"type": "Expense"
+	},
+	{
+		"_id": {
+			"$oid": "65fa0ee6e10537e752947610"
+		},
+		"name": "Personal Care",
+		"type": "Income"
+	},
+	{
+		"_id": {
+			"$oid": "65fa0ee6e10537e6d7eee881"
+		},
+		"name": "Personal Care",
+		"type": "Expense"
+	},
+	{
+		"_id": {
+			"$oid": "65fa0ee6e10537e6dda6a27f"
+		},
+		"name": "Clothing",
+		"type": "Income"
+	},
+	{
+		"_id": {
+			"$oid": "65fa0ee6e10537e7714af69e"
+		},
+		"name": "Clothing",
+		"type": "Expense"
+	},
+	{
+		"_id": {
+			"$oid": "65fa0ee6e10537e72c30d7d1"
+		},
+		"name": "Gifts/Donations",
+		"type": "Income"
+	},
+	{
+		"_id": {
+			"$oid": "65fa0ee6e10537e6f9e75cb4"
+		},
+		"name": "Gifts/Donations",
+		"type": "Expense"
+	},
+	{
+		"_id": {
+			"$oid": "65fa0ee6e10537e809859a54"
+		},
+		"name": "Miscellaneous",
+		"type": "Income"
+	},
+	{
+		"_id": {
+			"$oid": "65fa0ee6e10537e73df4f76b"
+		},
+		"name": "Miscellaneous",
+		"type": "Expense"
+	}
 ]
