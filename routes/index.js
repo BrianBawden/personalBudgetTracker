@@ -6,6 +6,9 @@ let docData;
 // TO ROUTES
 router.use('/users', users);
 
+// TO OAUTH
+router.use('/', require('./oauth.js'));
+
 // TO SWAGGER
 router.use('/', require('./swagger'));
 
