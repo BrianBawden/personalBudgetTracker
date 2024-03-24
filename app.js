@@ -77,7 +77,7 @@ passport.use(
 const app = express();
 
 // Use static files
-// app.use(express.static('./static'));
+app.use(express.static('./static'));
 
 app.use(bodyParser.json());
 // .use(cors())
