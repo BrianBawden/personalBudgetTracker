@@ -5,7 +5,7 @@ dotenv.config();
 // https://stackoverflow.com/questions/58354629/moving-nodejs-mongodb-connection-code-to-another-file
 const mongoClient = mongodb.MongoClient;
 
-const CONNECTION_STRING = process.env.MONGODB_URI;
+const connectionString = process.env.MONGODB_URI;
 
 let _db;
 
@@ -17,7 +17,7 @@ const initDb = (callback) => {
   }
 
   mongoClient
-    .connect(CONNECTION_STRING)
+    .connect(connectionString)
     .then((selectedClient) => {
       _db = selectedClient;
       callback(null, _db);
