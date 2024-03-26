@@ -11,7 +11,7 @@ const routes = require('./routes');
 
 var passport = require('passport');
 var session = require('express-session');
-// var GitHubStrategy = require('passport-github2').Strategy;
+var GitHubStrategy = require('passport-github2').Strategy;
 
 //** CONSTANTS -------------------------------------------------------------- */
 
@@ -44,13 +44,13 @@ console.log(`googleCallbackUrl - ${googleCallbackUrl}`);
 //   the user by ID when deserializing.  However, since this example does not
 //   have a database of user records, the complete GitHub profile is serialized
 //   and deserialized.
-// passport.serializeUser(function (user, done) {
-//   done(null, user);
-// });
+passport.serializeUser(function (user, done) {
+  done(null, user);
+});
 
-// passport.deserializeUser(function (obj, done) {
-//   done(null, obj);
-// });
+passport.deserializeUser(function (obj, done) {
+  done(null, obj);
+});
 
 //** MIDDLEWARES ------------------------------------------------------------ */
 
@@ -58,26 +58,26 @@ console.log(`googleCallbackUrl - ${googleCallbackUrl}`);
 //   Strategies in Passport require a `verify` function, which accept
 //   credentials (in this case, an accessToken, refreshToken, and GitHub
 //   profile), and invoke a callback with a user object.
-// passport.use(
-//   new GitHubStrategy(
-//     {
-//       clientID: googleClientId,
-//       clientSecret: googleClientSecret,
-//       callbackURL: googleCallbackUrl
-//     },
-//     function (accessToken, refreshToken, profile, done) {
-//       // asynchronous verification, for effect...
-//       process.nextTick(function () {
-//         return done(null, profile);
-//       });
-//     }
-//   )
-// );
+passport.use(
+  new GitHubStrategy(
+    {
+      clientID: googleClientId,
+      clientSecret: googleClientSecret,
+      callbackURL: googleCallbackUrl
+    },
+    function (accessToken, refreshToken, profile, done) {
+      // asynchronous verification, for effect...
+      process.nextTick(function () {
+        return done(null, profile);
+      });
+    }
+  )
+);
 
 const app = express();
 
 // Use static files
-// app.use(express.static('./static'));
+app.use(express.static('./static'));
 
 app.use(bodyParser.json());
 // .use(cors())
