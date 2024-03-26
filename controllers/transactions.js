@@ -25,7 +25,25 @@ const getData = async (req, res) => {
 };
 
 const getItem = async (req, res) => {
-  console.log('test');
+  // #swagger.tags = ['Transactions']
+
+  try {
+    const selectedId = req.params.id;
+    const collection = await mongodbInstance.getDb().db(DATABASE).collection(COLLECTION);
+
+    const response = await collection.findOne({ _id: new ObjectId(selectedId) });
+
+    if (response == undefined) {
+      res.setHeader('Content-Type', 'application/json');
+      res.status(404).json({ message: 'Item does not exist' });
+      res.json(response);
+    }
+
+    res.setHeader('Content-Type', 'application/json');
+    res.status(200).json(response);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 };
 
 const postItem = async (req, res) => {
