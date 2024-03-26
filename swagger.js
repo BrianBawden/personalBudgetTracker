@@ -73,6 +73,17 @@ const docsDefinition = {
       },
       profilePicture:
         'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAKySURBVDjLjZNbSNNRHMcXuoceFHrzpQdfsjd9FOzBMimIkWUKYT5Y5gVT0ES7EIqSWq2XZROJIHTd9hBDWKhbMJssbU1D527t4q4Onbvo7pv7ds6hiemLB76c3/nx+37O75z//3AAcA5KpVKVKRSKUZlMtiSVSrckEklALBYbRSLR2PvJsfLD9fuBWq3OI2YhMScdDgf8fj92dnYQiUQQCoWg1+sw9vppalw4ODkqGMn/D/DPPG2xWJDJZBCLxUAhdrsdPp8P6XQamXQUqagRCvkHvHjWqxwZfpK/D6A7U3MymQQdqVQKdG02mxEMBhk0EfUgHtZhL/4Hs1/fYaCvfZIBiLmUtL0XDoeZYXd3l0HcbjcMBgNoPp1OIRIyIBHWsy6SRF2dLXvd99vKOMQsdDqdoDIajcxEz0xBGxsbLE7EQwSgJUYHibdJhwkolUo0NzcLOSUlJTiu6N1QcCAQgNVqRUNDw28G0Gq1MJlMmJ+fx8TEBCums8vlYvlsjl6szWbD+vo6vF4v6urqfAxAi7ImCqGiuWw+O6vWbFjUmpkMdg+uVdduHwFQZc0HAT0VZ6GoL4K8govZ2tOY4Xfj8tUbuiNHyILonD3CVF8jNJ2liElfIqObRuRTF37eK8bwpTOqY13ix/MnESVmCHhA7ylgqBBbz8shvch1sx9JIBAI5+bm4A2ST+legc6+jFXrLyybFqExqFjbGc0XHByBvgLIL+RmGIDP5+cNDg3IP0+JYN3UMwgFLJkWoDH+gKymAOG3dwBiivdw4Ceyt+RgpjLHtf+Y+vv78x487nnT2tGUksyIsbD6nUFWLGooBW1YuFsET28hNh9yYWk8gW+83PR0Zc4jzuHn2dHRfq6ptXG8/vYtbc3N6/6qap6fV3VF+6q6eFFayfXQtsnOTmqm9X8BjufboeKd+1kAAAAASUVORK5CYII='
+    },
+    Transactions: {
+      _id: {
+        $oid: '65fa0f2de10537e70a81429e'
+      },
+      user_id: '65fa0ec5e10537e809859a53',
+      category_id: '65fa0ee6e10537e8928b95a2',
+      amount: 56.28,
+      date: '2021-03-20T23:25:32.000Z',
+      description: 'odio elementum eu interdum eu tincidunt in leo maecenas pulvinar',
+      paymentMethod: 'Debit Card'
     }
   }
 };
