@@ -19,10 +19,7 @@
       "description": "Endpoints related to managing budget app related data."
     }
   ],
-  "schemes": [
-    "https",
-    "http"
-  ],
+  "schemes": ["https", "http"],
   "securityDefinitions": {
     "api_key": {
       "type": "apiKey",
@@ -33,13 +30,9 @@
   "paths": {
     "/users/": {
       "get": {
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "responses": {
           "200": {
             "description": "OK"
@@ -50,9 +43,7 @@
         }
       },
       "post": {
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "description": "",
         "parameters": [
           {
@@ -128,13 +119,9 @@
     },
     "/users/{id}": {
       "get": {
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -156,9 +143,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "description": "",
         "parameters": [
           {
@@ -235,9 +220,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "description": "",
         "parameters": [
           {
@@ -273,9 +256,7 @@
               "example": "65ec8e6fe10537f1319886ed"
             }
           },
-          "required": [
-            "oid"
-          ]
+          "required": ["oid"]
         },
         "username": {
           "type": "string",
@@ -321,9 +302,7 @@
               "example": "2010-09-12T23:15:01.000Z"
             }
           },
-          "required": [
-            "date"
-          ]
+          "required": ["date"]
         },
         "profilePicture": {
           "type": "string",
