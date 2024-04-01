@@ -1,5 +1,5 @@
 require('dotenv').config();
-const isLocalHost = false;
+const isLocalHost = true;
 /* eslint-disable node/no-unpublished-require */
 const swaggerAutogen = require('swagger-autogen')();
 

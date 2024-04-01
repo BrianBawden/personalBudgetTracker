@@ -8,9 +8,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js",
+    "start": "nodemon server.js",
     "deploy": "npm run production",
-    "production": "node ./app.js",
+    "production": "node ./server.js",
     "swagger": "node ./swagger.js",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
@@ -30,6 +30,7 @@
     "joi-password-complexity": "^5.2.0",
     "mongodb": "^6.3.0",
     "mongoose": "^8.1.1",
+    "morgan": "^1.10.0",
     "passport": "^0.7.0",
     "passport-github2": "^0.1.12",
     "swagger-ui-express": "^5.0.0"

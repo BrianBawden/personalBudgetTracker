@@ -5,8 +5,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 // const cors = require('cors');
+var morgan = require('morgan');
+morgan(':method :url :status :res[content-length] - :response-time ms');
 
-const connection = require('./db/connect');
 const routes = require('./routes');
 
 var passport = require('passport');
@@ -16,9 +17,7 @@ var GitHubStrategy = require('passport-github2').Strategy;
 //** CONSTANTS -------------------------------------------------------------- */
 
 require('dotenv').config();
-const isLocalHost = false;
-const port = process.env.PORT || 8080;
-const render = process.env.RENDER_URI;
+const isLocalHost = true;
 
 const googleClientId = isLocalHost
   ? process.env.GOOGLE_CLIENT_ID_LOCALHOST
@@ -29,11 +28,6 @@ const googleClientSecret = isLocalHost
 const googleCallbackUrl = isLocalHost
   ? process.env.GOOGLE_CALLBACK_URL_LOCALHOST
   : process.env.GOOGLE_CALLBACK_URL;
-
-console.log(`Is localhost (app.js): ${isLocalHost}`);
-console.log(`googleClientId - ${googleClientId}`);
-console.log(`googleClientSecret - ${googleClientSecret}`);
-console.log(`googleCallbackUrl - ${googleCallbackUrl}`);
 
 //** METHODS ---------------------------------------------------------------- */
 
@@ -79,8 +73,13 @@ const app = express();
 // Use static files
 app.use(express.static('./static'));
 
+//
 app.use(bodyParser.json());
-// .use(cors())
+
+//
+// app.use(cors());
+
+//
 app.use((req, res, next) => {
   // https://www.youtube.com/watch?v=fLv6KkCOZ3o
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -93,20 +92,18 @@ app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
   next();
 });
+
+//
 app.use(session({ secret: 'keyboard-cat', resave: false, saveUninitialized: false }));
 // Initialize Passport!  Also use passport.session() middleware, to support
 // persistent login sessions (recommended).
 // app.use(passport.initialize());
 // app.use(passport.session());
+
+// https://www.npmjs.com/package/morgan#examples
+app.use(morgan('tiny'));
+
+//
 app.use(`/`, routes);
 
-connection.initDb((err) => {
-  if (err) {
-    console.log(err);
-  } else {
-    app.listen(port);
-    console.log(`Connected to DB and listening on ${port}`);
-    console.log(`API documentation - localhost: http://localhost:${port}/api-docs`);
-    console.log(`API documentation - Production server: ${render}/api-docs`);
-  }
-});
+module.exports = app;

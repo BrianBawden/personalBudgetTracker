@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "personalBudgetTracker",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}\\app.js"
+      "program": "${workspaceFolder}\\server.js"
     }
   ]
 }
