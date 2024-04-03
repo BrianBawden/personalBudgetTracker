@@ -1,22 +1,18 @@
 //** REQUIRES --------------------------------------------------------------- */
-
 /* eslint-disable no-console */
-
 const express = require('express');
 const bodyParser = require('body-parser');
-// const cors = require('cors');
-var morgan = require('morgan');
-morgan(':method :url :status :res[content-length] - :response-time ms');
-
+const morgan = require('morgan');
 const routes = require('./routes');
 
+require('dotenv').config();
+morgan(':method :url :status :res[content-length] - :response-time ms');
+
+//** VARIABLES -------------------------------------------------------------- */
 var passport = require('passport');
 var session = require('express-session');
 var GitHubStrategy = require('passport-github2').Strategy;
 
-//** CONSTANTS -------------------------------------------------------------- */
-
-require('dotenv').config();
 const isLocalHost = true;
 
 const googleClientId = isLocalHost
@@ -69,6 +65,7 @@ passport.use(
 );
 
 const app = express();
+// const appTesting = express();
 
 // Use static files
 app.use(express.static('./static'));
@@ -104,6 +101,8 @@ app.use(session({ secret: 'keyboard-cat', resave: false, saveUninitialized: fals
 app.use(morgan('tiny'));
 
 //
-app.use(`/`, routes);
+app.use('/', routes);
+// appTesting.use('/', routes);
+
 
 module.exports = app;

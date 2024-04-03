@@ -19,7 +19,10 @@
       "description": "Endpoints related to managing budget app related data."
     }
   ],
-  "schemes": ["http", "https"],
+  "schemes": [
+    "http",
+    "https"
+  ],
   "securityDefinitions": {
     "api_key": {
       "type": "apiKey",
@@ -30,9 +33,13 @@
   "paths": {
     "/users/": {
       "get": {
-        "tags": ["Users"],
+        "tags": [
+          "Users"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -43,7 +50,9 @@
         }
       },
       "post": {
-        "tags": ["Users"],
+        "tags": [
+          "Users"
+        ],
         "description": "",
         "parameters": [
           {
@@ -55,47 +64,47 @@
               "properties": {
                 "username": {
                   "type": "string",
-                  "example": ""
+                  "example": "testUser"
                 },
                 "passwordHash": {
                   "type": "string",
-                  "example": ""
+                  "example": "passwordHashTest"
                 },
                 "firstName": {
                   "type": "string",
-                  "example": ""
+                  "example": "firstNameTest"
                 },
                 "lastName": {
                   "type": "string",
-                  "example": ""
+                  "example": "lastNameTest"
                 },
                 "gender": {
                   "type": "string",
-                  "example": ""
+                  "example": "genderTest"
                 },
                 "address": {
                   "type": "string",
-                  "example": ""
+                  "example": "addressTest"
                 },
                 "location": {
                   "type": "string",
-                  "example": ""
+                  "example": "locationTest"
                 },
                 "email": {
                   "type": "string",
-                  "example": ""
+                  "example": "emailTest@test.com"
                 },
                 "phoneNumber": {
                   "type": "string",
-                  "example": ""
+                  "example": "phoneNumberTest"
                 },
                 "registrationDate": {
                   "type": "string",
-                  "example": ""
+                  "example": "registrationDateTest"
                 },
                 "profilePicture": {
                   "type": "string",
-                  "example": ""
+                  "example": "profilePictureTest"
                 }
               }
             }
@@ -119,9 +128,13 @@
     },
     "/users/{id}": {
       "get": {
-        "tags": ["Users"],
+        "tags": [
+          "Users"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -143,7 +156,9 @@
         }
       },
       "put": {
-        "tags": ["Users"],
+        "tags": [
+          "Users"
+        ],
         "description": "",
         "parameters": [
           {
@@ -220,7 +235,9 @@
         }
       },
       "delete": {
-        "tags": ["Users"],
+        "tags": [
+          "Users"
+        ],
         "description": "",
         "parameters": [
           {
@@ -245,9 +262,13 @@
     },
     "/transactions/": {
       "get": {
-        "tags": ["Transactions"],
+        "tags": [
+          "Transactions"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -258,7 +279,9 @@
         }
       },
       "post": {
-        "tags": ["Transactions"],
+        "tags": [
+          "Transactions"
+        ],
         "description": "",
         "parameters": [
           {
@@ -314,9 +337,13 @@
     },
     "/transactions/{id}": {
       "get": {
-        "tags": ["Transactions"],
+        "tags": [
+          "Transactions"
+        ],
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -338,7 +365,9 @@
         }
       },
       "put": {
-        "tags": ["Transactions"],
+        "tags": [
+          "Transactions"
+        ],
         "description": "",
         "parameters": [
           {
@@ -395,7 +424,9 @@
         }
       },
       "delete": {
-        "tags": ["Transactions"],
+        "tags": [
+          "Transactions"
+        ],
         "description": "",
         "parameters": [
           {
@@ -461,7 +492,9 @@
               "example": "65ec8e6fe10537f1319886ed"
             }
           },
-          "required": ["oid"]
+          "required": [
+            "oid"
+          ]
         },
         "username": {
           "type": "string",
@@ -507,7 +540,9 @@
               "example": "2010-09-12T23:15:01.000Z"
             }
           },
-          "required": ["date"]
+          "required": [
+            "date"
+          ]
         },
         "profilePicture": {
           "type": "string",
@@ -526,7 +561,9 @@
               "example": "65fa0f2de10537e70a81429e"
             }
           },
-          "required": ["oid"]
+          "required": [
+            "oid"
+          ]
         },
         "user_id": {
           "type": "string",
