@@ -13,7 +13,10 @@ const connection = require('../db/connect');
 
 // CONNECTION - Routes users
 const routeUsers = require('../routes/users');
+const bodyParser = require('body-parser'); // https://www.npmjs.com/package/body-parser
 const { response } = require('../app');
+appUsersTest.use(bodyParser.json());
+appUsersTest.use(bodyParser.urlencoded({ extended: true }));
 appUsersTest.use('/', routeUsers);
 
 /**
@@ -23,6 +26,7 @@ appUsersTest.use('/', routeUsers);
 let server;
 let userId;
 let newUserId;
+let userToChange;
 
 beforeAll(async () => {
   await connection.initDb((err) => {
@@ -43,7 +47,7 @@ afterAll(async () => {
 
 describe('RESOURCE: users', () => {
   // GET ALL
-  describe('ENDPOINT /users/', () => {
+  describe('ENDPOINT GET ALL /users/', () => {
     test('It should return a list of users in JSON response', async () => {
       return await request(appUsersTest)
         .get('/')
@@ -62,24 +66,58 @@ describe('RESOURCE: users', () => {
   });
 
   // GET BY ID
-  describe('ENDPOINT /users/{id}', () => {
+  describe('ENDPOINT GET ONE /users/{id}', () => {
     test('It should return a list of users in JSON response', async () => {
       return await request(appUsersTest)
         .get(`/${userId}`)
         .expect(200)
         .then((response) => {
-          // console.log(response.body);
+          userToChange = response.body;
+          console.log('GET ONE');
+          console.log(userToChange);
         });
     });
   });
 
   // POST
-  describe('ENDPOINT /users/', () => {
+  describe('ENDPOINT POST /users/', () => {
     test('It should post a new user', async () => {
+      const payload = {
+        username: 'postUser',
+        passwordHash: 'passwordHashTest',
+        firstName: 'firstNameTest',
+        lastName: 'lastNameTest',
+        gender: 'genderTest',
+        address: 'addressTest',
+        location: 'locationTest',
+        email: 'emailTest@test.com',
+        phoneNumber: 'phoneNumberTest',
+        registrationDate: 'registrationDateTest',
+        profilePicture: 'profilePictureTest'
+      };
       return await request(appUsersTest)
         .post('/')
+        .send(payload)
+        .expect(201)
+        .then((res) => {
+          //  {
+          //    "acknowledged": true,
+          //    "insertedId": "660dff8f44287691a79e9033"
+          //  }
+          newUserId = res.body['insertedId'];
+          console.log('POST');
+          console.log(newUserId);
+        });
+    });
+  });
+
+  // PUT
+  describe('ENDPOINT PUT /users/{id}', () => {
+    test('It should put an existing user', async () => {
+      return await request(appUsersTest)
+        .put(`/${newUserId}`)
         .send({
-          username: 'testUser',
+          username: 'putUser',
           passwordHash: 'passwordHashTest',
           firstName: 'firstNameTest',
           lastName: 'lastNameTest',
@@ -91,14 +129,23 @@ describe('RESOURCE: users', () => {
           registrationDate: 'registrationDateTest',
           profilePicture: 'profilePictureTest'
         })
-        .set('Content-Type', 'application/json')
-        .expect(422)
-        .then((response) => {
-          console.log(response.body);
-          //           {
-          //   "acknowledged": true,
-          //   "insertedId": "660dff8f44287691a79e9033"
-          // }
+        .expect(204)
+        .then((res) => {
+          console.log('PUT');
+          console.log(res.body);
+        });
+    });
+  });
+
+  // DELETE
+  describe('ENDPOINT DELETE /users/{id}', () => {
+    test('It should delete an existing user', async () => {
+      return await request(appUsersTest)
+        .delete(`/${newUserId}`)
+        .expect(200)
+        .then((res) => {
+          console.log('DELETE');
+          console.log(res.body['message']);
         });
     });
   });

@@ -1,8 +1,8 @@
 //** REQUIRES --------------------------------------------------------------- */
 /* eslint-disable no-console */
-const express = require('express');
-const bodyParser = require('body-parser');
-const morgan = require('morgan');
+const express = require('express'); // https://www.npmjs.com/package/express
+const bodyParser = require('body-parser');  // https://www.npmjs.com/package/body-parser
+const morgan = require('morgan'); // https://www.npmjs.com/package/morgan
 const routes = require('./routes');
 
 require('dotenv').config();
@@ -72,6 +72,7 @@ app.use(express.static('./static'));
 
 //
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //
 // app.use(cors());
