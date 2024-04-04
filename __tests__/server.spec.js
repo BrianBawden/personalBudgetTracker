@@ -9,7 +9,6 @@ describe('SERVER TESTS: ', () => {
   describe('SERVER listening on port: ', () => {
     test('Server should be listening and return status 200', async () => {
       const response = await request(app).get('/');
-      console.log(response.body);
       expect(response.status).toEqual(200);
     });
   });

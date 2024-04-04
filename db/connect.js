@@ -5,19 +5,19 @@ dotenv.config();
 // https://stackoverflow.com/questions/58354629/moving-nodejs-mongodb-connection-code-to-another-file
 const mongoClient = mongodb.MongoClient;
 
-const CONNECTION_STRING = process.env.MONGODB_URI;
+const connectionString = process.env.MONGODB_URI;
 
 let _db;
 
-const initDb = (callback) => {
+const initDb = async (callback) => {
   if (_db) {
     // eslint-disable-next-line no-console
     console.log('Db is already initialized!');
     return callback(null, _db);
   }
 
-  mongoClient
-    .connect(CONNECTION_STRING)
+  await mongoClient
+    .connect(connectionString)
     .then((selectedClient) => {
       _db = selectedClient;
       callback(null, _db);
@@ -34,7 +34,19 @@ const getDb = () => {
   return _db;
 };
 
+const closeDb = () => {
+  if (_db) {
+    _db.close();
+    _db = null;
+    console.log('Db connection closed');
+  } else {
+    console.log('Db connection not initialized');
+  }
+};
+
+
 module.exports = {
   initDb,
-  getDb
+  getDb,
+  closeDb
 };
