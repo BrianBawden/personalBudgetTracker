@@ -14,10 +14,14 @@ const connection = require('../db/connect');
 // CONNECTION - Routes users
 const routeUsers = require('../routes/users');
 const bodyParser = require('body-parser'); // https://www.npmjs.com/package/body-parser
-const { response } = require('../app');
 appUsersTest.use(bodyParser.json());
 appUsersTest.use(bodyParser.urlencoded({ extended: true }));
 appUsersTest.use('/', routeUsers);
+
+// LOGGER
+// https://www.npmjs.com/package/winston
+const logger = require('../utils/logger');
+
 
 /**
  * Using with MongoDB - https://jestjs.io/docs/mongodb
@@ -29,11 +33,12 @@ let newUserId;
 let userToChange;
 
 beforeAll(async () => {
+  logger.info('>> RUNNING TESTS <<');
   await connection.initDb((err) => {
     if (err) {
-      console.log(err);
+      logger.info(err);
     } else {
-      console.log(port);
+      logger.info(`Listening in port: ${port}`);
       server = appUsersTest.listen(port);
     }
   });
@@ -57,10 +62,10 @@ describe('RESOURCE: users', () => {
           const users = response.body;
           //It reads every user in the response
           // users.forEach((element) => {
-          //   console.log(element.username);
+          //   logger.info(element.username);
           // });
-          userId = users[0]._id;
-          // console.log(users[0]);
+          userId = users[0]._id; // GET THIS USER IN THE NEXT TEST
+          // logger.info(users[0]);
         });
     });
   });
@@ -69,12 +74,11 @@ describe('RESOURCE: users', () => {
   describe('ENDPOINT GET ONE /users/{id}', () => {
     test('It should return a list of users in JSON response', async () => {
       return await request(appUsersTest)
-        .get(`/${userId}`)
+        .get(`/${userId}`) // GET ONE USER
         .expect(200)
         .then((response) => {
           userToChange = response.body;
-          console.log('GET ONE');
-          console.log(userToChange);
+          logger.info(`GET ONE - One user requested\n${userToChange}`);
         });
     });
   });
@@ -102,11 +106,10 @@ describe('RESOURCE: users', () => {
         .then((res) => {
           //  {
           //    "acknowledged": true,
-          //    "insertedId": "660dff8f44287691a79e9033"
+          //    "insertedId": "660dff8f44287691a79e9033" // example
           //  }
           newUserId = res.body['insertedId'];
-          console.log('POST');
-          console.log(newUserId);
+          logger.info(`POST - New user id: ${newUserId}`);
         });
     });
   });
@@ -131,8 +134,7 @@ describe('RESOURCE: users', () => {
         })
         .expect(204)
         .then((res) => {
-          console.log('PUT');
-          console.log(res.body);
+          logger.info(`PUT - Modify posted user\n${res.body}`);
         });
     });
   });
@@ -144,8 +146,7 @@ describe('RESOURCE: users', () => {
         .delete(`/${newUserId}`)
         .expect(200)
         .then((res) => {
-          console.log('DELETE');
-          console.log(res.body['message']);
+          logger.info(`DELETE - delete put user\n${res.body['message']}`);
         });
     });
   });

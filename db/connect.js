@@ -2,6 +2,10 @@ const dotenv = require('dotenv');
 const mongodb = require('mongodb');
 dotenv.config();
 
+// LOGGER
+// https://www.npmjs.com/package/winston
+const logger = require('../utils/logger');
+
 // https://stackoverflow.com/questions/58354629/moving-nodejs-mongodb-connection-code-to-another-file
 const mongoClient = mongodb.MongoClient;
 
@@ -12,7 +16,7 @@ let _db;
 const initDb = async (callback) => {
   if (_db) {
     // eslint-disable-next-line no-console
-    console.log('Db is already initialized!');
+    logger.info('Db is already initialized!');
     return callback(null, _db);
   }
 
@@ -38,9 +42,9 @@ const closeDb = () => {
   if (_db) {
     _db.close();
     _db = null;
-    console.log('Db connection closed');
+    logger.info('Db connection closed');
   } else {
-    console.log('Db connection not initialized');
+    logger.info('Db connection not initialized');
   }
 };
 
