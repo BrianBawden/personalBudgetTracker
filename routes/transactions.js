@@ -3,15 +3,15 @@ const transaction = express.Router();
 
 const transactionsController = require('../controllers/transactions');
 
-const { userValidationRules, validate } = require('../middleware/validate');
+const { transactionValidationRules, validate } = require('../middleware/validate');
 
 transaction.get('/', transactionsController.getData);
 
 transaction.get('/:id', transactionsController.getItem);
 
-transaction.post('/', userValidationRules(), validate, transactionsController.postItem);
+transaction.post('/', transactionValidationRules(), validate, transactionsController.postItem);
 
-transaction.put('/:id', userValidationRules(), validate, transactionsController.putItem);
+transaction.put('/:id', transactionValidationRules(), validate, transactionsController.putItem);
 
 transaction.delete('/:id', transactionsController.deleteItem);
 

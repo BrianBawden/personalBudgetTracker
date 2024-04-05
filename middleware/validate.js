@@ -23,6 +23,23 @@ const userValidationRules = () => {
   ];
 };
 
+const transactionValidationRules = () => {
+  return [
+    body('user_id').notEmpty().isLength({ min: 23, max: 25 }).withMessage('user_id is required.'),
+    body('category_id')
+      .notEmpty()
+      .isLength({ min: 23, max: 25 })
+      .withMessage('category_id is required.'),
+    body('amount')
+      .notEmpty()
+      .isLength({ min: 3 })
+      .withMessage('Amount is required, with a minimum of 3 digits.'),
+    body('date').notEmpty().isLength({ min: 3, max: 25 }).withMessage('date is required.'),
+    body('description').notEmpty().withMessage('description is required.'),
+    body('paymentMethod').notEmpty().withMessage('Payment method is required.')
+  ];
+};
+
 // EXAMPLE CODE
 /** POST */
 // const postValidationRules = () => {
@@ -74,5 +91,6 @@ const validate = (req, res, next) => {
 
 module.exports = {
   userValidationRules,
+  transactionValidationRules,
   validate
 };
