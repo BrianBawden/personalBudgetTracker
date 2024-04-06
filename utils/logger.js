@@ -4,9 +4,19 @@ const { createLogger, format, transports } = require('winston');
 
 module.exports = createLogger({
   transports: [
+    new transports.File({
+      maxFiles: 5,
+      maxsize: 5120000, // ~5MB
+      filename: `${__dirname}/../logs/log-app.log`
+    }),
     new transports.Console({
-      level: 'debug',
-			format: format.combine(format.simple())
+      level: 'debug'
     })
   ],
+  // Share configuration for both transports
+  format: format.combine(
+    format.simple(),
+    format.timestamp(),
+    format.printf((info) => `[${info.timestamp}] ${info.level} - ${info.message}`)
+  )
 });
