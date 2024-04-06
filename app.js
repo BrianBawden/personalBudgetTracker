@@ -13,7 +13,7 @@ var passport = require('passport');
 var session = require('express-session');
 var GitHubStrategy = require('passport-github2').Strategy;
 
-const isLocalHost = true;
+const isLocalHost = false;
 
 const googleClientId = isLocalHost
   ? process.env.GOOGLE_CLIENT_ID_LOCALHOST

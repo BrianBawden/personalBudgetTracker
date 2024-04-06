@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "description": "Budget REST API."
   },
-  "host": "localhost:3000",
+  "host": "cs341-2024-winter-budget-app-swagger.onrender.com",
   "servers": [
     {
       "url": "http://localhost:3000",
@@ -20,8 +20,8 @@
     }
   ],
   "schemes": [
-    "http",
-    "https"
+    "https",
+    "http"
   ],
   "securityDefinitions": {
     "api_key": {
