@@ -41,3 +41,7 @@ Project requirements:
 # Conventions
 
 - [Quick MongoDB Naming Conventions 🔗](https://tennant.io/quick-mongodb-naming-conventions/)
+
+# Amazing Learning Resource
+
+- https://github.com/Maphnew/node_andrew/blob/master/README.md
