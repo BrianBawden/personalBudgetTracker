@@ -24,6 +24,7 @@ Project requirements:
 - Example: Swagger Petstore - https://petstore.swagger.io/
 - Initial schema idea: https://chat.openai.com/share/beee9135-606d-4a1a-a455-ef5486dadfed
 - Project proposal: [Google doc 🔗](https://docs.google.com/document/d/10L1suldt3137BcB0NRUbT7D55_Eiw0ZEeDGI1KQPwMk/edit?usp=sharing)
+- Admin validation: https://stackoverflow.com/questions/55424501/passing-request-body-to-post-using-super-test
 
 # Design
 
@@ -40,3 +41,7 @@ Project requirements:
 # Conventions
 
 - [Quick MongoDB Naming Conventions 🔗](https://tennant.io/quick-mongodb-naming-conventions/)
+
+# Amazing Learning Resource
+
+- https://github.com/Maphnew/node_andrew/blob/master/README.md

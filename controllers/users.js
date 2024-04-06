@@ -58,17 +58,17 @@ const postItem = async (req, res) => {
         in: 'body',
         description: 'Add new user.',
         schema: {
-					username: '',
-					passwordHash: '',
-					firstName: '',
-					lastName: '',
-					gender: '',
-					address: '',
-					location: '',
-					email: '',
-					phoneNumber: '',
-					registrationDate: '',
-					profilePicture: ''
+					username: 'testUser',
+					passwordHash: 'passwordHashTest',
+					firstName: 'firstNameTest',
+					lastName: 'lastNameTest',
+					gender: 'genderTest',
+					address: 'addressTest',
+					location: 'locationTest',
+					email: 'emailTest@test.com',
+					phoneNumber: 'phoneNumberTest',
+					registrationDate: 'registrationDateTest',
+					profilePicture: 'profilePictureTest',
         }
     } */
   try {
