@@ -7,6 +7,17 @@ const { body, validationResult } = require('express-validator');
 
 /** USER */
 // TODO Login - https://stackoverflow.com/questions/62630504/express-validator-isdate-and-isiso8601-are-always-false
+const budgetValidationRules = () => {
+  return [
+    body('budgetName').notEmpty().isLength({ min: 6 }).withMessage('budgetName is required.'),
+    body('startDate').notEmpty().isLength({ min: 3, max: 25 }).withMessage('date is required.'),
+    body('endDate').notEmpty().isLength({ min: 3, max: 25 }).withMessage('date is required.'),
+    body('amountTotal').notEmpty().isLength({ min: 3 }).withMessage('Total amount is required, with a minimum of 3 digits.'),
+    body('amountRemaining').notEmpty().isLength({ min: 3 }).withMessage('Amount Remaining is required, with a minimum of 3 digits.'),
+    body('notes').notEmpty().withMessage('notes is required.')
+  ];
+};
+
 const userValidationRules = () => {
   return [
     body('username').notEmpty().isLength({ min: 6 }).withMessage('username is required.'),
@@ -40,6 +51,12 @@ const transactionValidationRules = () => {
   ];
 };
 
+const categoriesValidationRules = () => {
+  return [
+    body('name').notEmpty().isLength({ min: 3 }).withMessage('name is required.'),
+    body('type').notEmpty().isLength({ min: 3 }).withMessage('type is required.'),
+  ];
+};
 // EXAMPLE CODE
 /** POST */
 // const postValidationRules = () => {
@@ -92,5 +109,6 @@ const validate = (req, res, next) => {
 module.exports = {
   userValidationRules,
   transactionValidationRules,
+  categoriesValidationRules,
   validate
 };
