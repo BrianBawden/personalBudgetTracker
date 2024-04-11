@@ -16,14 +16,14 @@ var GitHubStrategy = require('passport-github2').Strategy;
 const isLocalHost = false;
 
 const googleClientId = isLocalHost
-  ? process.env.GOOGLE_CLIENT_ID_LOCALHOST
-  : process.env.GOOGLE_CLIENT_ID;
+  ? process.env.GITHUB_CLIENT_ID_LOCALHOST
+  : process.env.GITHUB_CLIENT_ID;
 const googleClientSecret = isLocalHost
-  ? process.env.GOOGLE_CLIENT_SECRET_LOCALHOST
-  : process.env.GOOGLE_CLIENT_SECRET;
+  ? process.env.GITHUB_CLIENT_SECRET_LOCALHOST
+  : process.env.GITHUB_CLIENT_SECRET;
 const googleCallbackUrl = isLocalHost
-  ? process.env.GOOGLE_CALLBACK_URL_LOCALHOST
-  : process.env.GOOGLE_CALLBACK_URL;
+  ? process.env.GITHUB_CALLBACK_URL_LOCALHOST
+  : process.env.GITHUB_CALLBACK_URL;
 
 //** METHODS ---------------------------------------------------------------- */
 
