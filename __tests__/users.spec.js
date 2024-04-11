@@ -65,7 +65,8 @@ describe('RESOURCE: users', () => {
           //   logger.info(element.username);
           // });
           userId = users[0]._id; // GET THIS USER IN THE NEXT TEST
-          // logger.info(users[0]);
+          logger.info(`GET ALL - Request a list of all users`);
+          logger.info(users[0]);
         });
     });
   });
