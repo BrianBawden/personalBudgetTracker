@@ -18,7 +18,8 @@ router.get(
   '/github-oauth-callback',
   passport.authenticate('github', { failureRedirect: '/login' }),
   function (req, res) {
-    res.send(`Received code: ${req.query.code} `);
+    // res.send(`Received code: ${req.query.code} `);
+    res.redirect(`/api-docs/`);
   }
 );
 
