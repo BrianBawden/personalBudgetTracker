@@ -15,13 +15,13 @@ var GitHubStrategy = require('passport-github2').Strategy;
 
 const isLocalHost = false;
 
-const googleClientId = isLocalHost
+const githubClientId = isLocalHost
   ? process.env.GITHUB_CLIENT_ID_LOCALHOST
   : process.env.GITHUB_CLIENT_ID;
-const googleClientSecret = isLocalHost
+const githubClientSecret = isLocalHost
   ? process.env.GITHUB_CLIENT_SECRET_LOCALHOST
   : process.env.GITHUB_CLIENT_SECRET;
-const googleCallbackUrl = isLocalHost
+const githubCallbackUrl = isLocalHost
   ? process.env.GITHUB_CALLBACK_URL_LOCALHOST
   : process.env.GITHUB_CALLBACK_URL;
 
@@ -51,9 +51,9 @@ passport.deserializeUser(function (obj, done) {
 passport.use(
   new GitHubStrategy(
     {
-      clientID: googleClientId,
-      clientSecret: googleClientSecret,
-      callbackURL: googleCallbackUrl
+      clientID: githubClientId,
+      clientSecret: githubClientSecret,
+      callbackURL: githubCallbackUrl
     },
     function (accessToken, refreshToken, profile, done) {
       // asynchronous verification, for effect...
