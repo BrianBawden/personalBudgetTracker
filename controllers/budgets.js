@@ -2,7 +2,7 @@ const mongodbInstance = require('../db/connect');
 const { ObjectId } = require('mongodb');
 
 const DATABASE = process.env.DATABASE_NAME;
-const COLLECTION = process.env.COLLECTION_USERS;
+const COLLECTION = process.env.COLLECTION_BUDGETS;
 
 // Add Data Validation and Error Handling to simple Nodejs Project (cse341 lesson6 team activity)
 // https://youtu.be/S0przpEKKGU
@@ -53,22 +53,18 @@ const getItem = async (req, res) => {
 
 // POST
 const postItem = async (req, res) => {
-  // #swagger.tags = ['Users']
+  // #swagger.tags = ['Budgets']
   /*  #swagger.parameters['body'] = {
         in: 'body',
-        description: 'Add new user.',
+        description: 'Add new budget.',
         schema: {
-					username: '',
-					passwordHash: '',
-					firstName: '',
-					lastName: '',
-					gender: '',
-					address: '',
-					location: '',
-					email: '',
-					phoneNumber: '',
-					registrationDate: '',
-					profilePicture: ''
+					user_id: '65fa0ec5e10537e70a814299',
+          budgetName: 'Monthly Expenses',
+          startDate: '2019-04-12T09:33:20.000Z',
+          endDate: '2014-09-07T11:13:05.000Z',
+          amountTotal: 1317.56,
+          amountRemaining: 658.78,
+          notes: 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.'
         }
     } */
   try {
@@ -115,25 +111,21 @@ const postItem = async (req, res) => {
 
 // // PUT
 const putItem = async (req, res) => {
-  // #swagger.tags = ['Users']
+  // #swagger.tags = ['Budgets']
 
   // IMPORTANT
   // This comment is required for the swagger-autogen tool
   /*  #swagger.parameters['body'] = {
         in: 'body',
-        description: 'Update existing user data.',
+        description: 'Update existing budget data.',
        schema: {
-					username: '',
-					passwordHash: '',
-					firstName: '',
-					lastName: '',
-					gender: '',
-					address: '',
-					location: '',
-					email: '',
-					phoneNumber: '',
-					registrationDate: '',
-					profilePicture: ''
+					user_id: '65fa0ec5e10537e70a814299',
+          budgetName: 'Monthly Expenses',
+          startDate: '2019-04-12T09:33:20.000Z',
+          endDate: '2014-09-07T11:13:05.000Z',
+          amountTotal: 1317.56,
+          amountRemaining: 658.78,
+          notes: 'Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.'
         }
     } */
 
@@ -178,7 +170,7 @@ const putItem = async (req, res) => {
 
 // DELETE
 const deleteItem = async (req, res) => {
-  // #swagger.tags = ['Users']
+  // #swagger.tags = ['Budgets']
 
   try {
     var selectedId = req.params.id;

@@ -9,7 +9,7 @@ const COLLECTION = process.env.COLLECTION_CATEGORIES;
 
 // GET LIST
 const getData = async (req, res) => {
-  // #swagger.tags = ['Categories]
+  // #swagger.tags = ['Categories']
 
   try {
     const response = await mongodbInstance.getDb().db(DATABASE).collection(COLLECTION).find();
@@ -30,7 +30,7 @@ const getData = async (req, res) => {
 
 // GET ITEM
 const getItem = async (req, res) => {
-  // #swagger.tags = ['Users']
+  // #swagger.tags = ['Categories']
 
   try {
     var selectedId = req.params.id;

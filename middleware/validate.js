@@ -110,5 +110,6 @@ module.exports = {
   userValidationRules,
   transactionValidationRules,
   categoriesValidationRules,
+  budgetValidationRules,
   validate
 };
